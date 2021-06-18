@@ -1,0 +1,169 @@
+<html>
+    <head>
+        <title>Patient 1</title>
+        <meta http-equiv="refresh" content="10">
+        <style>
+            body{
+                height: 94%;
+                background: transparent;
+            }
+            table{
+                width: 60%;
+                height: 300px;
+                font-size: xx-large;
+                position: absolute;
+                top: 50%;
+                margin-top: -150px;
+                background-color: white;
+            }
+            th, td{
+                padding: 5px 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="chartContainer" style="width: 100%; height: 100%;">
+            <table>
+                <tr>
+                    <th>Parameters</th>
+                    <th>Measurement</th>
+                </tr>
+                <tr>
+                    <td>SpO2</td>
+                    <td>data1</td>
+                </tr>
+                <tr>
+                    <td>Rate</td>
+                    <td>data2</td>
+                </tr>
+                <tr>
+                    <td>Temperature</td>
+                    <td>data3</td>
+                </tr>
+                <!-- <tr>
+                    <td>Respiration</td>
+                    <td>data4</td>
+                </tr> -->
+            </table>
+        </div>
+        <script>
+            
+        /*    function edit(){
+                var datatoedit = window.prompt('Which details you want to edit', 'SPO2/Heart Rate/SPO2 Value');
+                
+                if(datatoedit === null){
+                    return;
+                }
+
+                switch(datatoedit){
+                    case 'SPO2': let n = window.prompt('No. of Data Points');
+                        for(let i=1;i<=n;i++){
+                            var v = window.prompt(i + " Data Point");
+                            var dp = {y: Number(v), x: i};
+                            ndp.push(dp);
+                        }break;
+                    case 'Heart Rate': n = window.prompt('No. of Data Points');
+                        for(let i=1;i<=n;i++){
+                            var v = window.prompt(i + " Data Point");
+                            var dp = {y: Number(v), x: i};
+                            ndp.push(dp);
+                        }break;
+                }
+
+            }
+
+            var ndp = [], hrdp = [];
+
+            for(let i=1;i<=76;i++){
+                if(i<27){
+                    ndp.push({y: 34, x: i});
+                    hrdp.push({y: 214, x: i});
+                }
+                else if(i>26 && i<52){
+                    ndp.push({y: 27, x: i});
+                    hrdp.push({y: 88, x: i});
+                }
+                else{
+                    ndp.push({y: 70, x: i});
+                    hrdp.push({y: 136, x: i});
+                }
+                
+            }
+        
+            window.onload = function () {
+
+                var chart = new CanvasJS.Chart("chartContainer", {
+                    axisY: {
+                        title: "AxisY Title",
+                    },
+                    axisX: {
+                        title: "AxisX Title",
+                    },
+                    animationEnabled: true,
+                    theme: "light4",
+                    title:{
+                        text: "SPO2"
+                    },
+                    data: [{        
+                        type: "line",
+                        markerType: 'none',
+                        indexLabelFontSize: 16,
+                        dataPoints: ndp,
+                    }]
+                });
+                chart.render();
+
+                chart = new CanvasJS.Chart("chartContainer2", {
+                    axisX: {
+                        title: "Seconds ---->",
+                    },
+                    axisY: {
+                        title: "Heart Rate ---->",
+                    },
+                    animationEnabled: true,
+                    theme: "light4",
+                    title:{
+                        text: "Heart Rate"
+                    },
+                    data: [{        
+                        type: "line",
+                        color: "red",
+                        markerType: 'none',
+                        indexLabelFontSize: 16,
+                        dataPoints: hrdp,
+                    }]
+                });
+                chart.render();
+
+                var body = document.querySelector('body');
+
+                var btn = docu#crt_new{
+	float: right;
+	margin-left: auto;
+	margin-top: 10px;
+	margin-right: auto;
+	cursor: pointer;
+	outline: none;
+	height: 30px;
+	width: 30px;
+	border-radius: 15px;
+	border: none;
+	background: transparent;
+	color: white;
+}
+#crt_new:hover{
+	color: rgb(187, 187, 187);
+	transition: 0.5s ease-in;
+}
+#crt_new:active{
+	color: #2a2f32;
+}ment.createElement('button');
+                btn.setAttribute('id', 'edit');
+                btn.innerHTML = "Edit the Data";
+                btn.style.cssText = 'width: 200px; height: 30px; margin-left: 43%; cursor: pointer; margin-top: 1%';
+                body.appendChild(btn);
+
+            }*/
+        </script>
+    </body>
+</html>

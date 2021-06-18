@@ -1,0 +1,350 @@
+<html>
+ <head>
+  <title>
+   Patient Records
+  </title>
+  <style>
+   *{
+	margin : 0%;
+	padding: 0%;
+	box-sizing: border-box;
+}
+body{
+	background: black;
+	display: flex;
+	transition: 1s ease-in;
+}
+.left_col{
+	background: #131c21;
+	width: 25%;
+	height: 100%;
+	overflow: hidden;
+}
+#right_col{
+	background: #131c21;
+	width: 75%;
+	height: 100%;
+	overflow: hidden;
+	border-left: 1px solid black;
+}
+#usr_prf{
+	width: 100%;
+	background: #2a2f32;
+	height: 60px;
+	text-align: center;
+	display: flex;
+}
+#usr_n{
+	font-weight: normal;
+	font-family: monospace;
+	color: white;
+	margin-top: 13px;
+	margin-left: 60px;
+	font-size: xx-large;
+	overflow: hidden;
+	cursor: pointer;
+	text-decoration: underline;
+	transition: 0.3s ease-in;
+}
+#usr_n:active{
+	color: #131c21;
+}
+#srch{
+	height: 50px;
+	display: flex;
+	transition: 1s ease-in;
+	border-bottom: 1px solid #2a2f32;
+}
+#s_br{
+	margin-top: 7.5px;
+	margin-left: 10px;
+	border-radius: 25px;
+	border: none;
+	width: 95%;
+	height: 35px;
+	background: #242d32;
+	padding-left: 30px;
+	color: white;
+	font-size: medium;
+}
+#s_br::placeholder{
+	padding-left: 70px;
+	font-size: 15px;
+}
+#s_br:focus{
+	outline: none;
+	border: 1px solid #03943b;
+}
+#rght_strt{
+	color: white;
+	text-align: center;
+	margin-top: 30%;
+	text-decoration: none;
+	font-size: 25px;
+	font-family: "papyrus";
+}
+#cntcts{
+	overflow-y: scroll;
+	width: 100%;
+	height: 84%;
+}
+#cntcts::-webkit-scrollbar{
+	width: 4px;
+}
+#cntcts::-webkit-scrollbar-track{
+	background: transparent;
+}
+#cntcts::-webkit-scrollbar-thumb{
+	background: #888;
+}
+#cntcts::-webkit-scrollbar-thumb:hover{
+	background: #555;
+}
+i.material-icons{
+	margin-left: 12px;
+	margin-right: 5px;
+	margin-top: 17px;
+	color: white;
+	font-size: 35px;
+	width: 45px;
+	height: 45px;
+	cursor: pointer;
+	margin-bottom: 3px;
+	transition: 0.5s ease;
+}
+i.material-icons:hover
+{
+	color: grey;
+}
+.im{
+	width: 70px;
+}
+.pt_prf{
+	width: 100%;
+	display: flex;
+	transition: 1s ease-in;
+}
+.user_n{
+	margin-left: 10px;
+	transition: 0.2s ease-in;
+	width: 100%;
+	border-bottom: 1px solid #2a2f32;
+}
+button.cntct{
+	color:white;
+	font-size: 20px;
+	width: 100%;
+	outline: none;
+	height: 100%;
+	text-align: left;
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: bold;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+}
+button.cntct:active{
+	border: 3px solid #202224;
+}
+.user_n:hover{
+	background: #2a2f32;
+}
+img.cntc_img:hover{
+	background: #2a2f32;
+}
+#srching{
+	height: 35px;
+	width: 50px;
+	margin-top: 7.5px;
+	border-radius: 0 25px 25px 0;
+	border: none;
+	background-color: #0073c0;
+	cursor: pointer;
+	outline: none;
+}
+#srching:hover{
+	background-color: #1dcc60;
+	transition: 0.2s ease-in;
+}
+#srching:active{
+	border: 3px solid #03943b;
+	background-color: #1dcc60;
+}
+  </style>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+ </head>
+ <body>
+  <div class="left_col">
+   <div id="usr_prf">
+    <!--User's profile-->
+    <h3 id="usr_n">
+     Patient Records
+     <!-- User's Name-->
+    </h3>
+   </div>
+   <div id="srch">
+    <input id="s_br" name="search" placeholder="Search" type="text"/>
+   </div>
+   <div id="cntcts">
+    <div class="pt_n">
+     <div class="pt_prf">
+      <div class="user_n">
+       <button class="cntct" id="device_1_id">
+        patient1
+       </button>
+      </div>
+      <i class="material-icons" name="device_1_id">
+       perm_identity
+      </i>
+     </div>
+    </div>
+    <div class="pt_n">
+     <div class="pt_prf">
+      <div class="user_n">
+       <button class="cntct" id="device_2_id">
+        Bhaskar
+       </button>
+      </div>
+      <i class="material-icons" name="device_2_id">
+       perm_identity
+      </i>
+     </div>
+    </div>
+    <div class="pt_n">
+     <div class="pt_prf">
+      <div class="user_n">
+       <button class="cntct" id="device_3_id">
+        Device3
+       </button>
+      </div>
+      <i class="material-icons" name="device_3_id">
+       perm_identity
+      </i>
+     </div>
+    </div>
+    <div class="pt_n">
+     <div class="pt_prf">
+      <div class="user_n">
+       <button class="cntct" id="device_4_id">
+        Device4
+       </button>
+      </div>
+      <i class="material-icons" name="device_4_id">
+       perm_identity
+      </i>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div id="right_col">
+   <p id="rght_strt">
+    Click on One of The Users to View his Report
+    <br/>
+    Click on the user icon to change the name
+   </p>
+  </div>
+  <script>
+   function opn(id){
+    id = id.srcElement.getAttribute('id');
+    let rght = document.getElementById('right_col');
+    let x = rght.querySelectorAll("*");
+    for(let i=0; i<x.length; i++){
+        var s = x[i];
+        if(i==0){
+            s.style.display = "none";
+        }
+        else{
+            s.remove();
+        }
+    }
+
+    var ifr = document.createElement('iframe');
+    ifr.setAttribute('id','charts');
+    ifr.setAttribute('src', `patientr/${id}.html`);
+    ifr.style.cssText = 'width: 100%; height: 85%; border: none; margin-top: 7%;';
+    rght.appendChild(ifr);
+}
+let l = document.querySelectorAll(".cntct");
+for(let i=0; i<l.length; i++)
+{
+	l[i].addEventListener("click", opn);
+}
+  </script>
+  <script>
+   function srch(){
+    var inp = document.querySelector('#s_br').value.toLowerCase();
+
+    var cntcts = document.getElementById('cntcts');
+    var pt_n = cntcts.getElementsByClassName('pt_n');
+
+    for(let i=0;i<pt_n.length;i++){
+
+        var pt_prf = pt_n[i].getElementsByClassName('pt_prf');
+        var user_n = pt_prf[0].getElementsByClassName('user_n');
+        var btn = user_n[0].getElementsByTagName('button')[0];
+        var tv = btn.textContent.toLowerCase() || cntct.innerHTML.toLowerCase();
+        
+        if(tv.indexOf(inp) > -1){
+            pt_n[i].style.display = '';
+        }
+        else{
+            pt_n[i].style.display = 'none';
+        }
+
+    }
+}
+
+document.querySelector('#s_br').addEventListener('keyup', srch);
+  </script>
+  <script>
+   function chng(){
+	let nw = window.prompt("Want to change the Heading,\nEnter the new Heading");
+	if(nw === null){
+		return;
+	}
+	else{
+		document.getElementById("usr_n").innerText = nw;
+	}
+}
+document.getElementById("usr_n").addEventListener("click", chng);
+  </script>
+  <script>
+   function chngn(id)
+	{
+		let nw = window.prompt("Want to change the Name of the Patient,\nEnter the new Name");
+		if(nw === null){
+			return;
+		}
+		else{
+			let item = id.srcElement.getAttribute("name");
+			let nm = document.getElementsByClassName("cntct");
+			for(let i=0; i<nm.length; i++)
+			{
+				let mn = nm[i];
+				let id = mn.getAttribute("id");
+				if(item == id)
+				{
+					document.getElementById(id).innerText = nw;
+				}
+			}
+			httpGet(`namechange/${item}/${nw}`);
+		}
+	}
+
+	for(let i=1; i<=l.length; i++)
+	{
+		let n = "device_"+i+"_id";
+		let pt = document.querySelector(`[name=${n}]`);
+		pt.addEventListener("click", chngn);
+	}
+  </script>
+  <script>
+   function httpGet(theUrl)
+	{
+	    var xmlHttp = new XMLHttpRequest();
+	    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+	    xmlHttp.send( null );
+	}
+  </script>
+ </body>
+</html>
