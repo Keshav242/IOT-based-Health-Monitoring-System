@@ -1,7 +1,7 @@
 <html>
 <head>
 <title>Patient 1</title>
-<meta content="10" http-equiv="refresh"/>
+<!-- <meta content="10" http-equiv="refresh"/> -->
 <style>
             body{
                 height: 94%;
@@ -21,32 +21,107 @@
             }
         </style>
 </head>
+<script src="https://cdn.plot.ly/plotly-2.9.0.min.js"></script>
 <body>
 <div id="chartContainer" style="width: 100%; height: 100%;">
-<table>
-<tr>
-<th>Parameters</th>
-<th>Measurement</th>
-</tr>
-<tr>
-<td>SpO2</td>
-<td>98%</td>
-</tr>
-<tr>
-<td>Rate</td>
-<td>73bpm</td>
-</tr>
-<tr>
-<td>Temperature</td>
-<td>94 F</td>
-</tr>
-<!-- <tr>
+            <table>
+                <tr>
+                    <th>Parameters</th>
+                    <th>Measurement</th>
+                </tr>
+                <tr>
+                    <td>SpO2</td>
+                    <td>data1</td>
+                </tr>
+                <tr>
+                    <td>Rate</td>
+                    <td>data2</td>
+                </tr>
+                <tr>
                     <td>Respiration</td>
                     <td>data4</td>
-                </tr> -->
-</table>
-</div>
-<script>
-</script>
+                </tr>
+                <tr>
+                    <td>Temperature</td>
+                    <td>data3</td>
+                </tr>
+                
+            </table>
+        </div>
+<div class="wrapper">
+      <div id="chart"></div>
+      <script>
+        function getCol(matrix, col) {
+          var column = [];
+          for (var i = 0; i < matrix.length; i++) {
+            column.push(matrix[i][col]);
+          }
+          return column; // return column data..
+        }
+        async function getData(initGraph = true) {
+          if (initGraph) {
+            let url = "fetchData";
+            let res = await httpGet(url);
+            console.log(typeof res);
+            let col = getCol(res, 1);
+            console.log("col::", col);
+            return col;
+          } else {
+            let url = "FetchNewData";
+            let res = await httpGet(url);
+            console.log("RES::", res);
+            console.log(typeof res);
+            return res[1];
+          }
+        }
+        var layout = {
+          title: "Heart Rate",
+          xaxis: {
+            title: "Time",
+            showgrid: false,
+            zeroline: false,
+          },
+          yaxis: {
+            title: "Rate",
+            showline: false,
+          },
+        };
+        getData().then((res) => {
+          Plotly.newPlot(
+            "chart",
+            [
+              {
+                y: res,
+                type: "line",
+              },
+            ],
+            layout
+          );
+        });
+
+        var cnt = 0;
+        setInterval(() => {
+          getData(false).then((data) => {
+            Plotly.extendTraces("chart", { y: [[data]] }, [0]);
+          });
+
+          cnt++;
+
+          if (cnt > 25) {
+            Plotly.relayout("chart", {
+              xaxis: {
+                range: [cnt - 25, cnt],
+              },
+            });
+          }
+        }, 1000);
+        async function httpGet(theUrl) {
+          const data = await fetch(theUrl);
+          const res = await data.json();
+          console.log(res);
+          return res;
+        }
+      </script>
+    </div>
 </body>
 </html>

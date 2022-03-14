@@ -125,10 +125,11 @@ i.material-icons:hover
 	transition: 1s ease-in;
 }
 .user_n{
-	margin-left: 10px;
+	margin-left: 10%;
 	transition: 0.2s ease-in;
 	width: 100%;
 	border-bottom: 1px solid #2a2f32;
+  color: white;
 }
 button.cntct{
 	color:white;
@@ -142,6 +143,7 @@ button.cntct{
 	background: transparent;
 	border: none;
 	cursor: pointer;
+  /*margin-left: 20%;*/
 }
 button.cntct:active{
 	border: 3px solid #202224;
@@ -186,54 +188,148 @@ img.cntc_img:hover{
     <input id="s_br" name="search" placeholder="Search" type="text"/>
    </div>
    <div id="cntcts">
-    <div class="pt_n">
-     <div class="pt_prf">
-      <div class="user_n">
-       <button class="cntct" id="device_1_id">
-        patient1
-       </button>
+    <ol>
+     <div class="pt_n">
+      <div class="pt_prf">
+       <div class="user_n">
+        <li>
+         <button class="cntct" id="device_1_id">
+          Barjeev%20Tyagi
+         </button>
+        </li>
+       </div>
+       <i class="material-icons" name="device_1_id">
+        perm_identity
+       </i>
       </div>
-      <i class="material-icons" name="device_1_id">
-       perm_identity
-      </i>
      </div>
-    </div>
-    <div class="pt_n">
-     <div class="pt_prf">
-      <div class="user_n">
-       <button class="cntct" id="device_2_id">
-        Bhaskar
-       </button>
+     <div class="pt_n">
+      <div class="pt_prf">
+       <div class="user_n">
+        <li>
+         <button class="cntct" id="device_2_id">
+          DEEP
+         </button>
+        </li>
+       </div>
+       <i class="material-icons" name="device_2_id">
+        perm_identity
+       </i>
       </div>
-      <i class="material-icons" name="device_2_id">
-       perm_identity
-      </i>
      </div>
-    </div>
-    <div class="pt_n">
-     <div class="pt_prf">
-      <div class="user_n">
-       <button class="cntct" id="device_3_id">
-        Device3
-       </button>
+     <div class="pt_n">
+      <div class="pt_prf">
+       <div class="user_n">
+        <li>
+         <button class="cntct" id="device_3_id">
+          ROHAN_YOGA
+         </button>
+        </li>
+       </div>
+       <i class="material-icons" name="device_3_id">
+        perm_identity
+       </i>
       </div>
-      <i class="material-icons" name="device_3_id">
-       perm_identity
-      </i>
      </div>
-    </div>
-    <div class="pt_n">
-     <div class="pt_prf">
-      <div class="user_n">
-       <button class="cntct" id="device_4_id">
-        Device4
-       </button>
+     <div class="pt_n">
+      <div class="pt_prf">
+       <div class="user_n">
+        <li>
+         <button class="cntct" id="device_4_id">
+          Pravin_123
+         </button>
+        </li>
+       </div>
+       <i class="material-icons" name="device_4_id">
+        perm_identity
+       </i>
       </div>
-      <i class="material-icons" name="device_4_id">
-       perm_identity
-      </i>
      </div>
-    </div>
+     <div class="pt_n">
+      <div class="pt_prf">
+       <div class="user_n">
+        <li>
+         <button class="cntct" id="device_5_id">
+          ASHISH
+         </button>
+        </li>
+       </div>
+       <i class="material-icons" name="device_5_id">
+        perm_identity
+       </i>
+      </div>
+     </div>
+     <div class="pt_n">
+      <div class="pt_prf">
+       <div class="user_n">
+        <li>
+         <button class="cntct" id="device_6_id">
+          Pravin_Kumar
+         </button>
+        </li>
+       </div>
+       <i class="material-icons" name="device_6_id">
+        perm_identity
+       </i>
+      </div>
+     </div>
+     <div class="pt_n">
+      <div class="pt_prf">
+       <div class="user_n">
+        <li>
+         <button class="cntct" id="device_7_id">
+          ANSHUL_YOGA
+         </button>
+        </li>
+       </div>
+       <i class="material-icons" name="device_7_id">
+        perm_identity
+       </i>
+      </div>
+     </div>
+     <div class="pt_n">
+      <div class="pt_prf">
+       <div class="user_n">
+        <li>
+         <button class="cntct" id="device_8_id">
+          MANish
+         </button>
+        </li>
+       </div>
+       <i class="material-icons" name="device_8_id">
+        perm_identity
+       </i>
+      </div>
+     </div>
+     <div class="pt_n">
+      <div class="pt_prf">
+       <div class="user_n">
+        <li>
+         <button class="cntct" id="device_9_id">
+          Device9
+         </button>
+        </li>
+       </div>
+       <i class="material-icons" name="device_9_id">
+        perm_identity
+       </i>
+      </div>
+     </div>
+     <div class="pt_n">
+      <div class="pt_prf">
+       <div class="user_n">
+        <li>
+         <button class="cntct" id="device_10_id">
+          Device10
+         </button>
+        </li>
+       </div>
+       <i class="material-icons" name="device_10_id">
+        perm_identity
+       </i>
+      </div>
+     </div>
+    </ol>
    </div>
   </div>
   <div id="right_col">
@@ -260,7 +356,7 @@ img.cntc_img:hover{
 
     var ifr = document.createElement('iframe');
     ifr.setAttribute('id','charts');
-    ifr.setAttribute('src', `patientr/${id}.html`);
+    ifr.setAttribute('src', `patientr/${id}/page`);
     ifr.style.cssText = 'width: 100%; height: 85%; border: none; margin-top: 7%;';
     rght.appendChild(ifr);
 }

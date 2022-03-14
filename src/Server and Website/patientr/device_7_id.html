@@ -111,10 +111,14 @@
             Plotly.relayout("chart", {
               xaxis: {
                 range: [cnt - 25, cnt],
+                title: "Time",
+              },
+              yaxis: {
+                title: "Rate",
               },
             });
           }
-        }, 1000);
+        }, 10000);
         async function httpGet(theUrl) {
           const data = await fetch(theUrl);
           const res = await data.json();
