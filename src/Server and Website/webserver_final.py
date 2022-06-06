@@ -238,17 +238,16 @@ def Client_accept(ServerSocket):
 
 if __name__ == "__main__":
     ServerSocket = socket.socket()                                      #setting up the socket
-    host = '10.12.0.65'                                                 #
+    host ='103.37.201.56'#'192.168.104.40'#hmscovid.iitr.ac.in'                                                 #10.12.0.65
     port = 4000                                                                 #
     ThreadCount = 0                                                             #
     ServerSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     ServerSocket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-
     ServerSocket.bind((host, port))                                             #
-
     print('Waitiing for a Connection..')                                        #
     print("hostname " + socket.gethostbyname(host), port)                       #
     ServerSocket.listen(5)                                                      #
     print("Web server Started")                                         #server started
     acceptin_client = threading.Thread(name='accepting_client', target  = Client_accept, args = (ServerSocket, ))      #Making a Thread For accepting client
-    acceptin_client.start()                                                                                         #starting the thread
+    acceptin_client.start()  
+    # http://hmscovid.iitr.ac.in    /                                                                                       #starting the thread
